@@ -31,9 +31,8 @@ Use as ES module:
 <link rel="icon" media="(prefers-color-scheme:dark)" href="favicon-dark.png" type="image/png" />
 <link rel="icon" media="(prefers-color-scheme:light)" href="favicon-light.png" type="image/png" />
 
-<script src="https://unpkg.com/favicon-switcher@1.0.0/dist/index.esm.js" crossorigin="anonymous" type="application/javascript"></script>
 <script type="module" language="javascript">
-  import initSwitcher from 'favicon-switcher'
+  import initSwitcher from 'https://unpkg.com/favicon-switcher@1.0.0/dist/index.esm.js'
 
   // Subscribe to media queries changing events
   const unsubscribe = initSwitcher()
