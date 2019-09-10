@@ -1,5 +1,7 @@
 # Favicon Switcher
 
+[Live preview](https://rumkin.github.io/favicon-switcher)
+
 Switches site's favicon by matching media queries. It could be used for
 light/dark mode switching. Due to browsers don't support all Media Query
 features in link tag, this module fixes it.

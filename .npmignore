@@ -10,6 +10,7 @@ pids/
 tmp/
 src/
 bin/
+docs/
 
 # OS files
 .DS_Store
