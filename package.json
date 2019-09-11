@@ -1,14 +1,15 @@
 {
   "name": "favicon-switcher",
   "description": "Switch page favicons using media queries",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "dist/index.umd.js",
   "browser": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "scripts": {
+    "build:common": "bin/build-common.sh src/index.js > dist/index.js",
     "build:umd": "bin/build-umd.sh src/index.js > dist/index.umd.js",
     "build:esm": "bin/build-esm.sh src/index.js > dist/index.esm.js",
-    "build": "npm run build:umd && npm run build:esm",
+    "build": "npm run build:common && npm run build:umd && npm run build:esm",
     "clean": "rm -rf dist && mkdir dist",
     "lint": "eslint src/index.js",
     "prepare": "npm run lint && npm run clean && npm run build",
