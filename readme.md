@@ -2,8 +2,8 @@
 
 [Live preview](https://rumkin.github.io/favicon-switcher)
 
-![Light mode favicon example](assets/example-light.png)
-![Dark mode favicon example](assets/example-dark.png)
+<img width="290" src="assets/example-light.png" alt="Light mode favicon example" />
+<img width="290" src="assets/example-dark.png" alt="Dark mode favicon example" />
 
 Switches site's favicon by matching media queries. It could be used for
 light/dark mode switching. Due to browsers don't support all Media Query
