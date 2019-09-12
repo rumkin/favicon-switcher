@@ -30,8 +30,6 @@ function initSwitcher() {
     })
   }
 
-  faviconApplyLoop()
-
   var intervalId = setInterval(faviconApplyLoop, 100)
 
   function unsubscribe() {
@@ -40,6 +38,11 @@ function initSwitcher() {
       document.head.appendChild(link)
     })
   }
+
+  faviconApplyLoop()
+  links.forEach(function(link) {
+    document.head.removeChild(link)
+  })
 
   return unsubscribe
 }
