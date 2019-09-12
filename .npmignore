@@ -11,6 +11,7 @@ tmp/
 src/
 bin/
 docs/
+assets/
 
 # OS files
 .DS_Store
