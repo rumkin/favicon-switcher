@@ -10,7 +10,7 @@ function applyLink(source, target) {
 }
 
 // eslint-disable-next-line no-unused-vars
-function initSwitcher() {
+function initSwitcher(delay ) {
   // Exit if media queries aren't supported
   if (typeof window.matchMedia !== 'function') {
     return function noop() {}
@@ -30,7 +30,7 @@ function initSwitcher() {
     })
   }
 
-  var intervalId = setInterval(faviconApplyLoop, 100)
+  var intervalId = setInterval(faviconApplyLoop, delay || 300)
 
   function unsubscribe() {
     clearInterval(intervalId)
