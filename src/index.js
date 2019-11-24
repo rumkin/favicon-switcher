@@ -24,14 +24,22 @@ function initSwitcher(delay) {
   document.head.appendChild(current)
 
   function faviconApplyLoop() {
+    var matched
+
     links.forEach(function(link) {
       if (window.matchMedia(link.media).matches) {
-        if (link.media !== prevMatch) {
-          prevMatch = link.media
-          applyLink(link, current)
-        }
+        matched = link
       }
     })
+
+    if (! matched) {
+      return
+    }
+
+    if (matched.media !== prevMatch) {
+      prevMatch = matched.media
+      applyLink(matched, current)
+    }
   }
 
   var intervalId = setInterval(faviconApplyLoop, delay || 300)
