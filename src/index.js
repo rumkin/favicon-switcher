@@ -16,7 +16,7 @@ function initSwitcher(delay ) {
     return function noop() {}
   }
 
-  const links = collectLinks()
+  var links = collectLinks()
 
   var current = document.createElement('link')
   current.setAttribute('rel', 'shortcut icon')
