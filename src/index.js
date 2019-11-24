@@ -10,22 +10,26 @@ function applyLink(source, target) {
 }
 
 // eslint-disable-next-line no-unused-vars
-function initSwitcher(delay ) {
+function initSwitcher(delay) {
   // Exit if media queries aren't supported
   if (typeof window.matchMedia !== 'function') {
     return function noop() {}
   }
 
   var links = collectLinks()
-
   var current = document.createElement('link')
+  var prevMatch
+
   current.setAttribute('rel', 'shortcut icon')
   document.head.appendChild(current)
 
   function faviconApplyLoop() {
     links.forEach(function(link) {
       if (window.matchMedia(link.media).matches) {
-        applyLink(link, current)
+        if (link.media !== prevMatch) {
+          prevMatch = link.media
+          applyLink(link, current)
+        }
       }
     })
   }

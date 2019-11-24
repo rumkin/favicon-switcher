@@ -17,7 +17,7 @@ The example below shows how to make dark/light mode icon switching.
 Use the main library to automatically turn icon switching on:
 
 ```html
-<script src="https://unpkg.com/favicon-switcher@1.0.0/dist/index.js" crossorigin="anonymous" type="application/javascript"></script>
+<script src="https://unpkg.com/favicon-switcher@1.2.0/dist/index.js" crossorigin="anonymous" type="application/javascript"></script>
 ```
 
 If you need more control to turn switching on and off use one of the next
@@ -28,7 +28,7 @@ module:
 Use with UMD:
 
 ```html
-<script src="https://unpkg.com/favicon-switcher@1.0.0/dist/index.umd.js" crossorigin="anonymous" type="application/javascript"></script>
+<script src="https://unpkg.com/favicon-switcher@1.2.0/dist/index.umd.js" crossorigin="anonymous" type="application/javascript"></script>
 <script>faviconSwitcher()</script>
 ```
 
@@ -38,7 +38,7 @@ Use as ES module:
 
 ```html
 <script type="module" language="javascript">
-  import initSwitcher from 'https://unpkg.com/favicon-switcher@1.0.0/dist/index.esm.js'
+  import initSwitcher from 'https://unpkg.com/favicon-switcher@1.2.0/dist/index.esm.js'
 
   // Subscribe to media queries changing events
   const unsubscribe = initSwitcher()
@@ -55,7 +55,7 @@ Use as ES module:
   <head>
     <link rel="icon" media="(prefers-color-scheme:dark)" href="favicon-dark.png" type="image/png" />
     <link rel="icon" media="(prefers-color-scheme:light)" href="favicon-light.png" type="image/png" />
-    <script src="https://unpkg.com/favicon-switcher@1.0.0/dist/index.js" crossorigin="anonymous" type="application/javascript"></script>
+    <script src="https://unpkg.com/favicon-switcher@1.2.0/dist/index.js" crossorigin="anonymous" type="application/javascript"></script>
   </head>
   <body></body>
 </html>
